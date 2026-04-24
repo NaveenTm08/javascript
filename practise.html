@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="a1"></p>
+    <label for=name>name:</label>
+    <input type="name" id="value1"><br>
+
+    <label for=age>age:</label>
+    <input type="age" id="value2"><br>
+
+    <p id="a2"></p>
+    <p id="a3"></p>
+
+    <button onclick="kl()">click</button>
+    <script>
+        
+       
+        function kl(){
+           let name =document.getElementById("value1").value
+           let age = document.getElementById("value2").value
+           console.log(name,age)
+           document.getElementById("a2").innerHTML = name
+           document.getElementById("a3").innerHTML = age
+        }
+    </script>
+
+</body>
+</html>

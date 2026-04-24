@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>good</h1>
+    <p id="p1"></p>
+    <p id="answer"></p>
+    <input type="text" id="value1">
+
+    <button onclick="naveen()">click</button>
+    
+    <script>
+        let a ="cat";
+        let b ="small";
+        let c = `${a} is favarate my animal,this animal is ${b} size`
+        // console.log(c)
+
+        // let a = "programing"
+        // console.log(a)
+
+        // let a = null
+        // console.log(a)
+
+        // let b;
+        // console.log(b)
+        document.getElementById("p1").innerHTML = c
+
+        function naveen(){
+            let v = document.getElementById("value1").value
+            console.log(v)
+            document.getElementById('answer').innerHTML = v
+        }
+        
+    </script>
+</body>
+</html>
