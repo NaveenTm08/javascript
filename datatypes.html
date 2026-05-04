@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>good</h1>
     <p id="p1"></p>
@@ -12,10 +14,10 @@
     <input type="text" id="value1">
 
     <button onclick="naveen()">click</button>
-    
+
     <script>
-        let a ="cat";
-        let b ="small";
+        let a = "cat";
+        let b = "small";
         let c = `${a} is favarate my animal,this animal is ${b} size`
         // console.log(c)
 
@@ -29,12 +31,50 @@
         // console.log(b)
         document.getElementById("p1").innerHTML = c
 
-        function naveen(){
-            let v = document.getElementById("value1").value
-            console.log(v)
-            document.getElementById('answer').innerHTML = v
+        function naveen() {
+            let v = document.getElementById("value1").value;
+            console.log(v);
+            document.getElementById('answer').innerHTML = v;
         }
+        // let z= { name :'arun',place:'thrissur'};
+        // z.age = 30
+        // delete z.name
+        // console.log(z)
+
+
+        // Array
+
+        let z = ['banana', 'grapes', 'apple', 'orange']
+        let y = ['blue ', 'green', 'yellow']
+
+        console.log(z)
+        console.log(typeof (z))
+        console.log(z[3])
+        console.log(z.length)
+        z.pop()
+        console.log(z)
+        z.shift()
+        console.log(z)
+        z.unshift('watermelon')
+        console.log(z)
+        z[1] = 'grapes1'
+        console.log(z)
+        z.push('kiwi')
+        console.log(z)
+
+        console.log(z.concat(y))
+
+        // console.log(z.copyWithin(2))
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.splice(2, 2, "Lemon", "Kiwi");
+        console.log(fruits); 
         
+        // Output: ["Banana", "Orange", "Lemon", "Kiwi", "Apple", "Mango"]
+
+        let x = ['red','blue','green','yellow','pink','orange']
+        console.log(x.slice(2,5))
     </script>
 </body>
+
 </html>
