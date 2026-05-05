@@ -4,36 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button{
+            width: 100px;
+        }
+    </style>
 </head>
 <body>
     <h1>operators</h1>
     <input type="text" id="num1" placeholder="number 1">
     <input type="text" id="num2" placeholder="number 2"><br>
+    <div style="display: flex;flex-direction: column;">
     <button onclick="add()">add</button>
     <button onclick="sub()">sub</button>
     <button onclick="multi()">multi</button>
     <button onclick="div()">div</button>
     <button onclick="mod()">mod</button>
-
+    <button onclick="incriment()">incriment</button>
+    <button onclick="decrment()">dicrement</button>
+</div>
     <p id="result"></p>
 
+    <h1>Comparison operators</h1>
 
     <script>
         // arithametic operators
-        let a = 10
-        let b = 20
-        console.log(a+b)
-        console.log(a-b)
-        console.log(a*b)
-        console.log(b/5)
-        console.log(a%3)
-        console.log(a**2)
-        // incriment 
-        a++
-        console.log(a)
-        // decrment
-        b--
-        console.log(b)
+        // let a = 10
+        // let b = 20
+        // console.log(a+b)
+        // console.log(a-b)
+        // console.log(a*b)
+        // console.log(b/5)
+        // console.log(a%3)
+        // console.log(a**2)
+        // // incriment 
+        // a++
+        // console.log(a)
+        // // decrment
+        // b--
+        // console.log(b)
 
         
 
@@ -64,6 +73,70 @@
             num2=parseInt(document.getElementById("num2").value)
             document.getElementById("result").innerHTML = num1%num2 
         }
+        function incriment(){
+            document.getElementById("result").innerHTML++
+        }
+        function decrment(){
+            document.getElementById("result").innerHTML--
+        }
+
+
+
+        let a = 30;
+        let b = 29;
+
+        let c = a == b;
+        console.log(c)
+        let d = a===b
+        console.log(d)
+        let v = a!=b
+        console.log(v)
+        let z = a!==b
+        console.log(z)
+         let x = a<=b
+         console.log(x)
+          let m = a>=b
+          console.log(m)
+          let k = a<b
+          console.log(k)
+
+        //   logical operators
+
+        let age = 18
+        let fnum = age >= 18
+        let snum = age < 30
+        let res = fnum &&  snum
+        console.log(`fnum value : ${fnum}\nsnum value:${snum}\nanswer : ${res}`)
+
+
+        // let ag = 25;
+        // let num1 = 1==18;
+        // let num2 = 30==40;
+        // let an = num1||num2
+        // console.log(`num1 value:${num1}\n num2 value:${num2}\n ag value:${ag}\n:${an}`)
+        let age1 = 20
+        let check1 = 1 <= age1 && 18 >= age1
+        console.log('check1 value :',check1)
+        let check2 = age1>=30 && age1 <= 40;
+        console.log('check 2 value : ',check2)
+        let result = check1 || check2
+        console.log('result is :', result)
+        
+        // assignment operators
+
+        // a = 10
+
+        // console.log(a+=5)
+        // console.log(a-=7)
+        // console.log(a*=2)
+        // console.log(a/=8)
+        // console.log(a**=4)
+        // console.log(a%=5)
+
+
+
+
+
 
     </script>
 </body>
