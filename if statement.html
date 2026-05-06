@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <h1>if statement</h1>
+
+    <input type="number" id="age" >
+    <button onclick="ages()">check</button>
+    <div id="result">
+
+
+
+    </div>
+    <script>
+    function ages(){
+        let age =document.getElementById("age").value
+        if(18 <= age && 30 >= age){
+            
+            document.getElementById('result').innerHTML += `<p style="color:yellow">your eligble</p>`;
+            document.getElementById('result').style.color = 'green'
+            
+        }
+        else if(age < 18){
+            let x = document.getElementById("result")
+            x.innerHTML = "you are under 18<br>" + x.innerHTML
+            x.style.color = 'blue'
+        }
+        else{
+            document.getElementById("result").innerHTML +=  "you are not eligible<br>";
+            document.getElementById('result').style.color = 'red'
+        }
+
+        
+    }
+    
+
+
+
+
+
+
+
+        // let age = 26
+        // if (age >=18 && age<=30){
+        //     console.log('you are eligble')
+        // }
+        // else{
+        //    console.log('you are not elible this section') 
+        // }
+    </script>
+</body>
+
+</html>

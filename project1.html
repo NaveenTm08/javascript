@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 300px;
+            height: 30px;
+            font-size: large;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="width: 100vw;justify-content: center;align-items: center;height:200px;display: flex; flex-direction: column;">
+        <div style="display: flex;flex-direction: row;">
+            <div style="display:flex;flex-direction: column;gap: 1px;"><label for="">Name:</label><br>
+                <label for="">malayalam:</label><br>
+                <label for="">English:</label><br>
+                <label for="">Social:</label><br>
+            </div>
+            <div>
+                <input type="text" id="name"><br>
+                <input type="text" id="malayalam"><br>
+                <input type="text" id="english"><br>
+                <input type="text" id="social"><br>
+            </div>
+
+
+        </div>
+        <div>
+            <button onclick="adddata()">submit</button>
+        </div>
+
+    </div>
+    <table border="2" style="border-collapse: collapse;width: 100%;" id="table">
+        <tr>
+            <th>Name</th>
+            <th>malayalam</th>
+            <th>English</th>
+            <th>Social</th>
+            <th>pass OR fail</th>
+        </tr>
+
+    </table>
+
+    <script>
+        function adddata() {
+            let name = document.getElementById("name").value
+            let malayalam = document.getElementById('malayalam').value
+            let english = document.getElementById('english').value
+            let social = document.getElementById('social').value
+            document.getElementById('table').innerHTML += ` <tr>
+            <td>${name}</td>
+            <td>${malayalam}</td>
+            <td>${english}</td>
+            <td>${social}</td>
+            <td>pass</td>
+        </tr>`
+
+        }
+    </script>
+</body>
+
+</html>
