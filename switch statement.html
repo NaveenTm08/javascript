@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>switch statement</h1>
+    <label for="days">DAY</label>
+    <input type="text" id="day">
+    <button onclick="day()">submit</button>
+    <p id="b1"></p>
+    <script>
+        // let day = "satuarday"
+        // switch (day){
+        //     case "mon":
+        //         console.log("working day");
+        //         break;
+        //     case "tue":
+        //         console.log("working day")
+        //         break;
+        //     case "satuarday":
+        //         console.log("not working day")
+        //         break;
+        //     default:
+        //         console.log("invalid input")
+        //         break;
+
+        // }
+        function day() {
+            let a = document.getElementById('day').value
+            
+            switch (a) {
+                case "monday":
+                    console.log("working day")
+                    document.getElementById("b1").innerHTML = "working day"
+                    break;
+                case "tuesday":
+                    console.log("working day")
+                    
+                    
+document.getElementById("b1").innerHTML = "working day"
+                    break;
+                case "wednesday":
+                    console.log("working day")
+                    document.getElementById("b1").innerHTML = "working day"
+                    break;
+
+                case "thursday":
+                    console.log("working day")
+                    document.getElementById("b1").innerHTML = "working day"
+                    break;
+
+                case "friday":
+                    console.log("working day")
+                    b = "working day 1"
+                    break;
+                case "saturday":
+                    console.log("not working day")
+                    b = "not working day 1"
+                    break;
+                case "sunday":
+                    console.log("not working day")
+                    b = "not working day"
+                    break;
+                    default: 
+                    console.log("invalid")
+                    b = "invalid input"
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

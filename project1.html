@@ -18,28 +18,32 @@
 <body>
     <div
         style="width: 100vw;justify-content: center;align-items: center;height:200px;display: flex; flex-direction: column;">
+        
         <div style="display: flex;flex-direction: row;">
             <div style="display:flex;flex-direction: column;gap: 1px;"><label for="">Name:</label><br>
                 <label for="">malayalam:</label><br>
                 <label for="">English:</label><br>
                 <label for="">Social:</label><br>
             </div>
+            
             <div>
-                <input type="text" id="name"><br>
-                <input type="text" id="malayalam"><br>
-                <input type="text" id="english"><br>
-                <input type="text" id="social"><br>
+                <input type="text" id="name" required><br>
+                <input type="text" id="malayalam" required><br>
+                <input type="text" id="english" required><br>
+                <input type="text" id="social" required><br>
             </div>
+            
 
 
         </div>
         <div>
             <button onclick="adddata()">submit</button>
         </div>
+        
 
     </div>
     <table border="2" style="border-collapse: collapse;width: 100%;" id="table">
-        <tr>
+        <tr  >
             <th>Name</th>
             <th>malayalam</th>
             <th>English</th>
@@ -55,15 +59,26 @@
             let malayalam = document.getElementById('malayalam').value
             let english = document.getElementById('english').value
             let social = document.getElementById('social').value
-            document.getElementById('table').innerHTML += ` <tr>
+            let status = "Fail"
+            let cl = 'green'
+           
+            if (english>=30 && malayalam>=30 && social>=30){
+                status = "Pass"
+                cl = 'yellow'
+                
+
+            }
+            
+            document.getElementById('table').innerHTML += `<tr style="background-color: ${cl};">
             <td>${name}</td>
             <td>${malayalam}</td>
             <td>${english}</td>
             <td>${social}</td>
-            <td>pass</td>
+            <td >${status}</td>
         </tr>`
 
         }
+        
     </script>
 </body>
 
