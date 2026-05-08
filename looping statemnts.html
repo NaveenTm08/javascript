@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>for loop</h1>
+    <!-- <input type="number" name="" id="forinput">
+    <button onclick="count()">create Number</button>
+    <div id="result"></div> -->
+
+    <h1>while loop</h1>
+
+    <!-- <input type="text" id="value">
+    <button onclick="add()">div</button>
+    <p id="division"></p> -->
+
+    <div>
+        <input type="text" id="result1">
+    <button onclick="ans()">click</button>
+    <table border="1" id="cot">
+        
+        
+    </table>
+    </div>
+    <script>
+
+        // for (let i=0;i<=10;i++){
+        //     console.log(i)
+        // }
+
+        function count(){
+            document.getElementById('result').innerHTML = ''
+            let num = document.getElementById('forinput').value
+            for(let i=1;i<=10;i++){
+                document.getElementById('result').innerHTML += `<p style="color:red">${i} x ${num}=${i*num}</p>`
+            }
+
+        }
+        function add(){
+            let a =document.getElementById("value").value
+            let z = 1;
+            document.getElementById("division").innerHTML=" "
+            while(z<=10){
+                
+                document.getElementById('division').innerHTML += `<p>${z} / ${a} = ${z/a}</p>`
+                z++
+            }
+           
+
+        }
+        // let z=1;
+        // while(z<=10){
+        //     console.log(z)
+        //     z++
+        // }
+
+        let j =100
+        do{
+            console.log(j)
+            j++
+        }
+        while(j<10)
+
+    function ans(){
+        let a1 = document.getElementById("result1").value
+        let c = 1;
+        document.getElementById("cot").innerHTML = `<tr>
+            <th>${a1}</th>
+        </tr>`
+        while(c<=10){
+            document.getElementById("cot").innerHTML+=`<td>${c} x ${a1} = ${c*a1}</td>`
+            c++
+        }
+        
+    }
+
+    </script>
+</body>
+</html>

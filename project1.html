@@ -8,7 +8,7 @@
     <style>
         input {
             width: 300px;
-            height: 30px;
+            height: 32px;
             font-size: large;
 
         }
@@ -17,13 +17,20 @@
 
 <body>
     <div
-        style="width: 100vw;justify-content: center;align-items: center;height:200px;display: flex; flex-direction: column;">
+        style="width: 100vw;justify-content: center;align-items: center;height:auto;display: flex; flex-direction: column;">
         
         <div style="display: flex;flex-direction: row;">
-            <div style="display:flex;flex-direction: column;gap: 1px;"><label for="">Name:</label><br>
+            <div style="display:flex;flex-direction: column;"><label for="">Name:</label><br>
                 <label for="">malayalam:</label><br>
                 <label for="">English:</label><br>
                 <label for="">Social:</label><br>
+                <label for="">IT:</label><br>
+                <label for="">Hindi:</label><br>
+                <label for="">chemistry:</label><br>
+                <label for="">Physics:</label><br>
+                <label for="">biology:</label><br>
+                <label for="">geograpy:</label><br>
+               
             </div>
             
             <div>
@@ -31,6 +38,12 @@
                 <input type="text" id="malayalam" required><br>
                 <input type="text" id="english" required><br>
                 <input type="text" id="social" required><br>
+                <input type="text" id="it" required><br>
+                <input type="text" id="hindi" required><br>
+                <input type="text" id="phisics" required><br>
+                <input type="text" id="chemistry" required><br>
+                <input type="text" id="biology" required><br>
+                <input type="text" id="geograpy" required><br>
             </div>
             
 
@@ -48,6 +61,12 @@
             <th>malayalam</th>
             <th>English</th>
             <th>Social</th>
+            <th>IT</th>
+            <th>Hindi</th>
+            <th>Pysics</th>
+            <th>chemistry</th>
+            <th>Biology</th>
+            <th>geograpy</th>
             <th>pass OR fail</th>
         </tr>
 
@@ -59,10 +78,16 @@
             let malayalam = document.getElementById('malayalam').value
             let english = document.getElementById('english').value
             let social = document.getElementById('social').value
+            let it = document.getElementById('it').value
+            let hindi = document.getElementById('hindi').value
+            let chemistry = document.getElementById('chemistry').value
+            let physics = document.getElementById('phisics').value
+            let biology = document.getElementById('biology').value
+            let geograpy = document.getElementById('geograpy').value
             let status = "Fail"
             let cl = 'green'
            
-            if (english>=30 && malayalam>=30 && social>=30){
+            if (english>=30 && malayalam>=30 && social>=30 && hindi >=30 && chemistry >=30 && physics >= 30 && biology >= 30 && geograpy >= 30){
                 status = "Pass"
                 cl = 'yellow'
                 
@@ -74,7 +99,13 @@
             <td>${malayalam}</td>
             <td>${english}</td>
             <td>${social}</td>
-            <td >${status}</td>
+            <td>${it}</td>
+            <td>${hindi}</td>
+            <td>${chemistry}</td>
+            <td>${physics}</td>
+            <td>${biology}</td>
+            <td>${geograpy}</td>
+            <td>${status}</td>
         </tr>`
 
         }
