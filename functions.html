@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <div>
+    <h1>functions</h1>
+    <input type="text" id="num1" class="input1">
+    <input type="text" id="num2">
+    <button onclick="add()">add</button>
+    <p id="result"></p>
+</div>
+<div>
+    <h1>color change function</h1>
+    <button onclick="changecolor('red')">red</button>
+    <button onclick="changecolor('green')">green</button>
+    <button onclick="changecolor('black')">black</button>
+    <button onclick="changecolor('rgb(137, 180, 215)')">rgb</button>
+</div>
+    
+    <script>
+
+        function sum(a,b){
+            return a-b
+        }
+        function add(){
+            
+            let num1 =parseInt(document.getElementById('num1').value)
+            let num2 =parseInt(document.getElementById('num2').value)
+            console.log(num1+num2)
+            // document.getElementById('background').style.backgroundColor = 'yellow'
+            document.getElementById("result").innerHTML = `<p style="color:red">${sum(num1,num2)}</p>` + document.getElementById("result").innerHTML
+        }
+        
+
+        function changecolor(x){
+            document.getElementsByTagName('div')[1].style.backgroundColor = x
+            document.getElementsByClassName('input1')[0].style= `background-color:${x};width:100px;height:100px;`
+        }
+
+        
+    </script>
+    
+</body>
+</html>

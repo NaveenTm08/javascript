@@ -13,6 +13,7 @@
     <div id="result"></div> -->
 
     <h1>while loop</h1>
+    
 
     <!-- <input type="text" id="value">
     <button onclick="add()">div</button>
@@ -25,6 +26,12 @@
         
         
     </table>
+    </div>
+    <h2>do while</h2>
+    <input type="text" id="do">
+    <button onclick="countnum()">click</button>
+    <div id = "answer">
+
     </div>
     <script>
 
@@ -58,12 +65,12 @@
         //     z++
         // }
 
-        let j =100
-        do{
-            console.log(j)
-            j++
-        }
-        while(j<10)
+        // let j =100
+        // do{
+        //     console.log(j)
+        //     j++
+        // }
+        // while(j<10)
 
     function ans(){
         let a1 = document.getElementById("result1").value
@@ -77,6 +84,17 @@
         }
         
     }
+    function countnum(){
+        document.getElementById("answer").innerHTML = ""
+        let x = document.getElementById('do').value
+        do{
+            document.getElementById("answer").innerHTML += x
+            x++
+        }
+        while(x<=10)
+    }
+
+
 
     </script>
 </body>

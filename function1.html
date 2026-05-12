@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .navsection{
+        display: flex;
+        gap: 10px
+    }
+    .projects{
+        position: absolute;
+        margin: 20px 0px 0px 10px ;
+        background-color: yellow;
+        overflow: hidden;
+        width: 100%;
+        display: block;
+        height: 0px;
+        transition: height 1s;
+    }
+    
+</style>
+
+<body>
+    <div class="navsection">
+        <div class="nav-item" onmouseenter="projects()">porjects</div>
+        <div class="projects">
+            <ol>
+                <li>item1</li>
+                <li>item2</li>
+                <li>item3</li>
+                <li>item4</li>
+            </ol>
+        </div>
+        <div class="nav-item">about</div>
+        <div class="nav-item">details</div>
+        <div class="nav-item">contact</div>
+    </div>
+    <script>
+        function projects() {
+             document.getElementsByClassName('projects')[0].style = 'height:200px'
+        }
+
+
+        
+    </script>
+</body>
+
+</html>
