@@ -20,7 +20,11 @@
     <button onclick="changecolor('black')">black</button>
     <button onclick="changecolor('rgb(137, 180, 215)')">rgb</button>
 </div>
-    
+<h1>subtract</h1>
+<input type="text" id="sub1">
+<input type="text" id="sub2">
+    <button onclick="sub()">sub</button>
+    <div id="answer">subract</div>
     <script>
 
         function sum(a,b){
@@ -41,7 +45,21 @@
             document.getElementsByClassName('input1')[0].style= `background-color:${x};width:100px;height:100px;`
         }
 
+        // const sub = (x,y) =>{
+        //     console.log("answer is :", x-y)
+        // }
+
         
+
+        // sub(10,5)
+
+
+        let sub =() =>{
+           let x = document.getElementById("sub1").value
+           let y = document.getElementById("sub2").value
+        document.getElementById("answer").innerHTML = x-y
+        
+        }
     </script>
     
 </body>
